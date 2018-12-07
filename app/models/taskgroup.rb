@@ -1,2 +1,0 @@
-class Taskgroup < ApplicationRecord
-end
