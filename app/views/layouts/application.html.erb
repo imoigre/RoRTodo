@@ -21,7 +21,9 @@
     <%= yield %>
   </div>
 </div>
-<%= render 'tasks/popup' %>
-<%= render 'groups/popup' %>
+<% if @current_user %>
+  <%= render 'tasks/popup' %>
+  <%= render 'groups/popup' %>
+<% end %>
 </body>
 </html>

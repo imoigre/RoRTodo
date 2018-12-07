@@ -4601,3 +4601,565 @@ Processing by TasksController#update as JS
 Completed 200 OK in 508ms (ActiveRecord: 491.5ms)
 
 
+Started DELETE "/session" for 127.0.0.1 at 2018-12-07 23:49:17 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/imoigre/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#destroy as JS
+  Parameters: {"authenticity_token"=>"b6zCzMXbMt0AGTZ5UB6uTYLpci113mwTzafbWa1YpdnHwG/em0y6F8Md9Q/lC/b4zTOqAVsBPGkM0GVqSPQOLg=="}
+Redirected to http://localhost:3000/session/new
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2018-12-07 23:49:17 +0200
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (33.5ms)
+  Rendered sessions/new.html.erb within layouts/application (44.2ms)
+  Rendered tasks/_form.html.erb (1.6ms)
+  Rendered tasks/_popup.html.erb (2.4ms)
+Completed 500 Internal Server Error in 306ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @task, remote: true, class: 'col-lg-6 col-8 mx-auto' do |f| %>
+    2:   <div class="input-group">
+    3:     <%= f.select :group_id, options_for_select(Group.all.collect { |g| [g.name, g.id] }) %>
+    4:   </div>
+  
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__23451009845144925_70279171411460'
+app/views/tasks/_popup.html.erb:7:in `_app_views_tasks__popup_html_erb___4570288584037174723_70279172515740'
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb__2235408926605478601_47384894629720'
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:52:46 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2018-12-07 23:52:46 +0200
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.2ms)
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered tasks/_form.html.erb (1.6ms)
+  Rendered tasks/_popup.html.erb (2.7ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @task, remote: true, class: 'col-lg-6 col-8 mx-auto' do |f| %>
+    2:   <div class="input-group">
+    3:     <%= f.select :group_id, options_for_select(Group.all.collect { |g| [g.name, g.id] }) %>
+    4:   </div>
+  
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__23451009845144925_70279164046300'
+app/views/tasks/_popup.html.erb:7:in `_app_views_tasks__popup_html_erb___4570288584037174723_70278920506780'
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb__2235408926605478601_70278919395900'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/session/new" for 127.0.0.1 at 2018-12-07 23:53:05 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/imoigre/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (2.6ms)
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+  Rendered tasks/_form.html.erb (1.6ms)
+  Rendered tasks/_popup.html.erb (2.8ms)
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @task, remote: true, class: 'col-lg-6 col-8 mx-auto' do |f| %>
+    2:   <div class="input-group">
+    3:     <%= f.select :group_id, options_for_select(Group.all.collect { |g| [g.name, g.id] }) %>
+    4:   </div>
+  
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__1640077287203789011_69897859470840'
+app/views/tasks/_popup.html.erb:7:in `_app_views_tasks__popup_html_erb__2032058031644760608_69897859649040'
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb___1869503025612043043_69897847654800'
+Started GET "/session/new" for 127.0.0.1 at 2018-12-07 23:54:43 +0200
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.7ms)
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered tasks/_form.html.erb (1.4ms)
+  Rendered tasks/_popup.html.erb (2.3ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @task, remote: true, class: 'col-lg-6 col-8 mx-auto' do |f| %>
+    2:   <div class="input-group">
+    3:     <%= f.select :group_id, options_for_select(Group.all.collect { |g| [g.name, g.id] }) %>
+    4:   </div>
+  
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__1640077287203789011_69897943211920'
+app/views/tasks/_popup.html.erb:7:in `_app_views_tasks__popup_html_erb__2032058031644760608_69897943189560'
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb___1869503025612043043_69897942070380'
+Started GET "/session/new" for 127.0.0.1 at 2018-12-07 23:54:56 +0200
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.7ms)
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+  Rendered tasks/_form.html.erb (1.3ms)
+  Rendered tasks/_popup.html.erb (2.1ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @task, remote: true, class: 'col-lg-6 col-8 mx-auto' do |f| %>
+    2:   <div class="input-group">
+    3:     <%= f.select :group_id, options_for_select(Group.all.collect { |g| [g.name, g.id] }) %>
+    4:   </div>
+  
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__1640077287203789011_69897863077800'
+app/views/tasks/_popup.html.erb:7:in `_app_views_tasks__popup_html_erb__2032058031644760608_69897863091600'
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb___1869503025612043043_69897864495560'
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:56:16 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Redirected to http://localhost:3000/session/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2018-12-07 23:56:16 +0200
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (1.8ms)
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+  Rendered tasks/_form.html.erb (1.3ms)
+  Rendered tasks/_popup.html.erb (2.1ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @task, remote: true, class: 'col-lg-6 col-8 mx-auto' do |f| %>
+    2:   <div class="input-group">
+    3:     <%= f.select :group_id, options_for_select(Group.all.collect { |g| [g.name, g.id] }) %>
+    4:   </div>
+  
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__1640077287203789011_69897866421020'
+app/views/tasks/_popup.html.erb:7:in `_app_views_tasks__popup_html_erb__2032058031644760608_69897866426660'
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb___1869503025612043043_69897943675500'
+Started GET "/session/new" for 127.0.0.1 at 2018-12-07 23:58:15 +0200
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (2.8ms)
+  Rendered sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 96ms (Views: 88.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-12-08 00:00:15 +0200
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"name"=>"InterTest", "password"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "InterTest"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/sessions_controller.rb:9
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "InterTest"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:9
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "InterTest"], ["password_digest", "$2a$10$Di.zTItZ/UG6aHVQ9q3HI.KZIg8VGnfcJjQ3cSXFj8vveUEIYLa0K"], ["created_at", "2018-12-07 22:00:15.546648"], ["updated_at", "2018-12-07 22:00:15.546648"]]
+  ↳ app/controllers/sessions_controller.rb:9
+  [1m[35m (169.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/sessions_controller.rb:9
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "InterTest"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:10
+Redirected to http://localhost:3000/tasks
+Completed 200 OK in 368ms (ActiveRecord: 171.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-12-08 00:00:15 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 9], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.9ms)
+  Rendered tasks/_popup.html.erb (3.7ms)
+  Rendered groups/_form.html.erb (0.9ms)
+  Rendered groups/_popup.html.erb (1.7ms)
+Completed 200 OK in 76ms (Views: 37.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-12-08 00:00:27 +0200
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"University Tasks"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:10
+  [1m[36mGroup Create (1.5ms)[0m  [1m[32mINSERT INTO "groups" ("name", "user_id") VALUES (?, ?)[0m  [["name", "University Tasks"], ["user_id", 9]]
+  ↳ app/controllers/groups_controller.rb:10
+  [1m[35m (191.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:12
+Redirected to http://localhost:3000/
+Completed 200 OK in 227ms (ActiveRecord: 193.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-08 00:00:27 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 9], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.1ms)
+  Rendered tasks/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.3ms)
+  Rendered tasks/_popup.html.erb (3.1ms)
+  Rendered groups/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.5ms)
+Completed 200 OK in 99ms (Views: 91.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-12-08 00:01:49 +0200
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"Geekhub tasks"}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:10
+  [1m[36mGroup Create (0.3ms)[0m  [1m[32mINSERT INTO "groups" ("name", "user_id") VALUES (?, ?)[0m  [["name", "Geekhub tasks"], ["user_id", 9]]
+  ↳ app/controllers/groups_controller.rb:10
+  [1m[35m (624.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:12
+Redirected to http://localhost:3000/
+Completed 200 OK in 634ms (ActiveRecord: 625.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-08 00:01:49 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 9], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.0ms)
+  Rendered tasks/_popup.html.erb (2.8ms)
+  Rendered groups/_form.html.erb (0.8ms)
+  Rendered groups/_popup.html.erb (1.5ms)
+Completed 200 OK in 49ms (Views: 46.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-08 00:03:53 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group_id"=>"7", "title"=>"Add email async ", "description"=>"", "expire_at"=>"2018-12-15"}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (3.2ms)
+  Rendered tasks/create.js.erb (8.4ms)
+Completed 200 OK in 31ms (Views: 14.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-08 00:04:14 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group_id"=>"1", "title"=>"Email async ", "description"=>"Add Email async with login info to user", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.4ms)
+  Rendered tasks/create.js.erb (6.5ms)
+Completed 200 OK in 23ms (Views: 11.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-08 00:04:15 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group_id"=>"1", "title"=>"Email async ", "description"=>"Add Email async with login info to user", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (3.3ms)
+  Rendered tasks/create.js.erb (7.9ms)
+Completed 200 OK in 29ms (Views: 12.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-08 00:04:19 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group_id"=>"1", "title"=>"Email async ", "description"=>"Add Email async with login info to user", "expire_at"=>"2018-12-15"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mTask Create (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "expire_at", "created_at", "updated_at", "user_id", "group_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Email async "], ["description", "Add Email async with login info to user"], ["expire_at", "2018-12-15 00:00:00"], ["created_at", "2018-12-07 22:04:19.630501"], ["updated_at", "2018-12-07 22:04:19.630501"], ["user_id", 9], ["group_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (155.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 200 OK in 179ms (ActiveRecord: 157.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-08 00:04:19 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 9], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  Rendered collection of tasks/_task.html.erb [1 times] (32.7ms)
+  Rendered tasks/index.html.erb within layouts/application (42.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.1ms)
+  Rendered tasks/_popup.html.erb (2.9ms)
+  Rendered groups/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.5ms)
+Completed 200 OK in 97ms (Views: 88.2ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-08 00:04:51 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group_id"=>"6", "title"=>"Learn Math", "description"=>"learn algebra", "expire_at"=>"2018-12-21"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "expire_at", "created_at", "updated_at", "user_id", "group_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Learn Math"], ["description", "learn algebra"], ["expire_at", "2018-12-21 00:00:00"], ["created_at", "2018-12-07 22:04:51.107689"], ["updated_at", "2018-12-07 22:04:51.107689"], ["user_id", 9], ["group_id", 6]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (161.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 200 OK in 178ms (ActiveRecord: 162.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-08 00:04:51 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 9], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  Rendered collection of tasks/_task.html.erb [2 times] (15.4ms)
+  Rendered tasks/index.html.erb within layouts/application (25.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (8.4ms)
+  Rendered tasks/_popup.html.erb (9.2ms)
+  Rendered groups/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.5ms)
+Completed 200 OK in 87ms (Views: 78.3ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/tasks/7" for 127.0.0.1 at 2018-12-08 00:04:54 +0200
+Processing by TasksController#destroy as JS
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mTask Destroy (196.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/tasks_controller.rb:23
+Redirected to http://localhost:3000/
+Completed 200 OK in 204ms (ActiveRecord: 196.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-08 00:04:54 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 9], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  Rendered collection of tasks/_task.html.erb [1 times] (2.7ms)
+  Rendered tasks/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.0ms)
+  Rendered tasks/_popup.html.erb (2.8ms)
+  Rendered groups/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.5ms)
+Completed 200 OK in 60ms (Views: 52.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-08 00:06:41 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group_id"=>"7", "title"=>"Add email validation ", "description"=>"create email validation + email async with login info to user", "expire_at"=>"2018-12-30"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mTask Create (1.8ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "expire_at", "created_at", "updated_at", "user_id", "group_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Add email validation "], ["description", "create email validation + email async with login info to user"], ["expire_at", "2018-12-30 00:00:00"], ["created_at", "2018-12-07 22:06:41.633402"], ["updated_at", "2018-12-07 22:06:41.633402"], ["user_id", 9], ["group_id", 7]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (145.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 200 OK in 171ms (ActiveRecord: 148.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-08 00:06:41 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 9], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  Rendered collection of tasks/_task.html.erb [2 times] (12.4ms)
+  Rendered tasks/index.html.erb within layouts/application (23.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.3ms)
+  Rendered tasks/_popup.html.erb (3.1ms)
+  Rendered groups/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.5ms)
+Completed 200 OK in 93ms (Views: 82.6ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-08 00:07:16 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group_id"=>"6", "title"=>"Do my home assignment for tomorrow", "description"=>"Some math practise", "expire_at"=>"2018-12-08"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mTask Create (0.9ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "expire_at", "created_at", "updated_at", "user_id", "group_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Do my home assignment for tomorrow"], ["description", "Some math practise"], ["expire_at", "2018-12-08 00:00:00"], ["created_at", "2018-12-07 22:07:16.695111"], ["updated_at", "2018-12-07 22:07:16.695111"], ["user_id", 9], ["group_id", 6]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (141.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 200 OK in 160ms (ActiveRecord: 142.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-08 00:07:16 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 9], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mCACHE Group Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  Rendered collection of tasks/_task.html.erb [3 times] (13.7ms)
+  Rendered tasks/index.html.erb within layouts/application (19.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (1.9ms)
+  Rendered tasks/_popup.html.erb (2.8ms)
+  Rendered groups/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.4ms)
+Completed 200 OK in 63ms (Views: 56.7ms | ActiveRecord: 1.7ms)
+
+
