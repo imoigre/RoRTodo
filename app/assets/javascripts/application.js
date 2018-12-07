@@ -17,7 +17,13 @@
 //= require_tree .
 
 function openPopup () {
-    $('.modal').show(500, function () {
+    $('#modal-task').show(500, function () {
+        $(this).addClass('active')
+    })
+}
+
+function openGroupPopup () {
+    $('#modal-group').show(500, function () {
         $(this).addClass('active')
     })
 }

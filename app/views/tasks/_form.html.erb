@@ -1,5 +1,9 @@
 <%= form_for @task, remote: true, class: 'col-lg-6 col-8 mx-auto' do |f| %>
   <div class="input-group">
+    <%= f.select :group_id, options_for_select(Group.all.collect { |g| [g.name, g.id] }) %>
+  </div>
+
+  <div class="input-group">
     <%= f.text_field :title, value: @task.title, class: 'form-control', placeholder: 'Title' %>
     <p class="error"><%= @task.errors[:title].first %></p>
   </div>

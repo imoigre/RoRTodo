@@ -1,13 +1,13 @@
 class GroupsController < ApplicationController
   before_action :require_user
 
-  def index
-    @group = Group.new
-    @groups = Group.all
-  end
+#  def index
+  #  @group = Group.new
+  #  @groups = Group.all
+#  end
 
   def create
-  #  @group = current_user.groups.create(group_params)
+    @group = current_user.groups.create(group_params)
     return if @group.invalid?
     @group.save
     redirect_to :root
@@ -30,10 +30,10 @@ class GroupsController < ApplicationController
   end
 
   def update_group_params
-    params.require(:group).permit(:status)
+    params.require(:group).permit
   end
 
   def group_params
-    params.require(:group).permit(:title, :description, :expire_at, :status)
+    params.require(:group).permit(:name)
   end
 end

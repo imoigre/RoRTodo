@@ -10,10 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_07_102421) do
+ActiveRecord::Schema.define(version: 2018_12_07_110538) do
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
   create_table "tasks", force: :cascade do |t|

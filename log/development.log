@@ -3111,3 +3111,1493 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 7384ms (Views: 7350.9ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-07 14:29:23 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/imoigre/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/imoigre/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddUserToGroup (20181207110538)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (14.5ms)[0m  [1m[35mALTER TABLE "groups" ADD "user_id" integer[0m
+  ↳ db/migrate/20181207110538_add_user_to_group.rb:3
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20181207110538_add_user_to_group.rb:3
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE  INDEX "index_groups_on_user_id" ON "groups" ("user_id")[0m
+  ↳ db/migrate/20181207110538_add_user_to_group.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181207110538"]]
+  ↳ bin/rails:9
+  [1m[35m (80.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/imoigre/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-12-07 22:20:50 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/imoigre/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:20
+  Rendered collection of tasks/_task.html.erb [0 times] (0.2ms)
+  Rendered tasks/index.html.erb within layouts/application (46.6ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered tasks/_form.html.erb (35.0ms)
+  Rendered tasks/_popup.html.erb (40.6ms)
+Completed 200 OK in 1104ms (Views: 1054.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 22:22:40 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.1ms)
+  Rendered tasks/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered tasks/_form.html.erb (1.3ms)
+  Rendered tasks/_popup.html.erb (2.4ms)
+Completed 200 OK in 85ms (Views: 78.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 22:25:04 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered tasks/_form.html.erb (1.0ms)
+  Rendered tasks/_popup.html.erb (1.9ms)
+Completed 200 OK in 72ms (Views: 59.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 22:36:32 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered tasks/_form.html.erb (2.1ms)
+  Rendered tasks/_popup.html.erb (3.8ms)
+  Rendered tasks/_form.html.erb (1.1ms)
+  Rendered groups/_popup.html.erb (2.7ms)
+Completed 200 OK in 70ms (Views: 65.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 22:40:30 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"title"=>"", "description"=>"", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:10
+  Rendering tasks/create.js.erb
+  Rendered tasks/_form.html.erb (2.3ms)
+  Rendered tasks/create.js.erb (8.1ms)
+Completed 200 OK in 155ms (Views: 14.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 22:40:38 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered tasks/_form.html.erb (1.1ms)
+  Rendered tasks/_popup.html.erb (2.0ms)
+  Rendered tasks/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (2.2ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 22:40:53 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.1ms)
+  Rendered tasks/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered tasks/_form.html.erb (1.9ms)
+  Rendered tasks/_popup.html.erb (3.0ms)
+  Rendered tasks/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.9ms)
+Completed 200 OK in 80ms (Views: 72.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 22:41:00 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered tasks/_form.html.erb (1.0ms)
+  Rendered tasks/_popup.html.erb (2.4ms)
+  Rendered tasks/_form.html.erb (0.5ms)
+  Rendered groups/_popup.html.erb (1.2ms)
+Completed 200 OK in 66ms (Views: 62.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 22:41:19 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered tasks/_form.html.erb (1.4ms)
+  Rendered tasks/_popup.html.erb (2.5ms)
+  Rendered tasks/_form.html.erb (0.8ms)
+  Rendered groups/_popup.html.erb (2.4ms)
+Completed 200 OK in 50ms (Views: 46.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 22:42:34 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered tasks/_form.html.erb (1.5ms)
+  Rendered tasks/_popup.html.erb (2.7ms)
+  Rendered tasks/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.8ms)
+Completed 200 OK in 339ms (Views: 333.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 22:43:40 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered tasks/_form.html.erb (1.5ms)
+  Rendered tasks/_popup.html.erb (2.6ms)
+  Rendered tasks/_form.html.erb (0.6ms)
+  Rendered groups/_popup.html.erb (2.1ms)
+Completed 200 OK in 53ms (Views: 49.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 22:45:30 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered tasks/_form.html.erb (1.2ms)
+  Rendered tasks/_popup.html.erb (2.2ms)
+  Rendered groups/_form.html.erb (101.8ms)
+  Rendered groups/_popup.html.erb (103.4ms)
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @group, remote: true, class: 'col-lg-6 col-8 mx-auto' do |f| %>
+    2:   <div class="input-group">
+    3:     <%= f.text_field :name, value: @group.name, class: 'form-control', placeholder: 'Name' %>
+    4:     <p class="error"><%= @group.errors[:group].first %></p>
+  
+app/views/groups/_form.html.erb:1:in `_app_views_groups__form_html_erb___4492676708935825825_70047478975300'
+app/views/groups/_popup.html.erb:7:in `_app_views_groups__popup_html_erb___3616131973379303568_70047478997380'
+app/views/layouts/application.html.erb:25:in `_app_views_layouts_application_html_erb__4342315364282314242_70047528111440'
+Started GET "/" for 127.0.0.1 at 2018-12-07 22:48:18 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered tasks/_form.html.erb (1.3ms)
+  Rendered tasks/_popup.html.erb (2.3ms)
+  Rendered groups/_form.html.erb (199.5ms)
+  Rendered groups/_popup.html.erb (201.1ms)
+Completed 500 Internal Server Error in 287ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `groups_path' for #<#<Class:0x00007f6a58142160>:0x00007f6a581406d0>):
+    1: <%= form_for @group, remote: true, class: 'col-lg-6 col-8 mx-auto' do |f| %>
+    2:   <div class="input-group">
+    3:     <%= f.text_field :name, value: @group.name, class: 'form-control', placeholder: 'Name' %>
+    4:     <p class="error"><%= @group.errors[:group].first %></p>
+  
+app/views/groups/_form.html.erb:1:in `_app_views_groups__form_html_erb___4492676708935825825_70047527611340'
+app/views/groups/_popup.html.erb:7:in `_app_views_groups__popup_html_erb___3616131973379303568_70047527699460'
+app/views/layouts/application.html.erb:25:in `_app_views_layouts_application_html_erb__4342315364282314242_70047360477560'
+Started GET "/" for 127.0.0.1 at 2018-12-07 22:49:47 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered tasks/_form.html.erb (2.1ms)
+  Rendered tasks/_popup.html.erb (3.1ms)
+  Rendered groups/_form.html.erb (1.5ms)
+  Rendered groups/_popup.html.erb (3.3ms)
+Completed 200 OK in 129ms (Views: 82.6ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-12-07 22:52:15 +0200
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"test"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `invalid?' for nil:NilClass):
+  
+app/controllers/groups_controller.rb:11:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-12-07 22:52:17 +0200
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"test"}, "button"=>""}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `invalid?' for nil:NilClass):
+  
+app/controllers/groups_controller.rb:11:in `create'
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 22:53:06 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"title"=>"qwwqe", "description"=>"qweqweqw", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  Rendered tasks/_form.html.erb (3.0ms)
+  Rendered tasks/create.js.erb (9.7ms)
+Completed 200 OK in 32ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 22:53:15 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"title"=>"qwwqe", "description"=>"qweqweqw", "expire_at"=>"2018-12-07"}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  Rendered tasks/_form.html.erb (2.9ms)
+  Rendered tasks/create.js.erb (12.2ms)
+Completed 200 OK in 63ms (Views: 26.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 22:56:49 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"title"=>"qwwqe", "description"=>"qweqweqw", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  Rendered tasks/_form.html.erb (3.3ms)
+  Rendered tasks/create.js.erb (16.4ms)
+Completed 200 OK in 75ms (Views: 37.2ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+Started POST "/groups" for 127.0.0.1 at 2018-12-07 22:59:40 +0200
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"test"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `invalid?' for nil:NilClass):
+  
+app/controllers/groups_controller.rb:11:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+Started POST "/groups" for 127.0.0.1 at 2018-12-07 23:08:17 +0200
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"test"}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `invalid?' for nil:NilClass):
+  
+app/controllers/groups_controller.rb:11:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGroup Create (0.8ms)[0m  [1m[32mINSERT INTO "groups" ("name", "user_id") VALUES (?, ?)[0m  [["name", "test"], ["user_id", 1]]
+  [1m[35m (187.0ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/groups" for 127.0.0.1 at 2018-12-07 23:11:08 +0200
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"test"}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `invalid?' for nil:NilClass):
+  
+app/controllers/groups_controller.rb:11:in `create'
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:14:10 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered tasks/_form.html.erb (1.6ms)
+  Rendered tasks/_popup.html.erb (2.9ms)
+  Rendered groups/_form.html.erb (2.0ms)
+  Rendered groups/_popup.html.erb (3.3ms)
+Completed 200 OK in 100ms (Views: 60.7ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-12-07 23:14:17 +0200
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"tes"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 500 Internal Server Error in 55952ms (ActiveRecord: 0.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/groups_controller.rb:11:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-12-07 23:15:33 +0200
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"tes"}, "button"=>""}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:10
+  [1m[36mGroup Create (1.6ms)[0m  [1m[32mINSERT INTO "groups" ("name", "user_id") VALUES (?, ?)[0m  [["name", "tes"], ["user_id", 8]]
+  ↳ app/controllers/groups_controller.rb:10
+  [1m[35m (248.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:10
+Completed 500 Internal Server Error in 8044ms (ActiveRecord: 262.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `invalid?'
+app/controllers/groups_controller.rb:12:in `create'
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:15:47 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.3ms)
+  Rendered tasks/index.html.erb within layouts/application (52.0ms)
+  Rendered layouts/_header.html.erb (11.9ms)
+  Rendered tasks/_form.html.erb (31.1ms)
+  Rendered tasks/_popup.html.erb (43.7ms)
+  Rendered groups/_form.html.erb (19.1ms)
+  Rendered groups/_popup.html.erb (30.3ms)
+Completed 200 OK in 1303ms (Views: 1026.3ms | ActiveRecord: 12.9ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-12-07 23:15:55 +0200
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"test"}, "button"=>""}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:10
+  [1m[36mGroup Create (18.4ms)[0m  [1m[32mINSERT INTO "groups" ("name", "user_id") VALUES (?, ?)[0m  [["name", "test"], ["user_id", 8]]
+  ↳ app/controllers/groups_controller.rb:10
+  [1m[35m (160.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:10
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 181.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `invalid?'
+app/controllers/groups_controller.rb:12:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-12-07 23:16:39 +0200
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"test123123"}, "button"=>""}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 500 Internal Server Error in 10840ms (ActiveRecord: 22.1ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `groups'
+app/controllers/groups_controller.rb:11:in `create'
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:17:05 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/imoigre/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered tasks/_form.html.erb (4.9ms)
+  Rendered tasks/_popup.html.erb (6.2ms)
+  Rendered groups/_form.html.erb (1.9ms)
+  Rendered groups/_popup.html.erb (3.2ms)
+Completed 200 OK in 431ms (Views: 390.5ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-12-07 23:17:15 +0200
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"1312312312"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 500 Internal Server Error in 6470ms (ActiveRecord: 0.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/groups_controller.rb:11:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-12-07 23:18:42 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/imoigre/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"1312312312"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Started POST "/groups" for 127.0.0.1 at 2018-12-07 23:18:56 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/imoigre/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"1312312312"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:11
+  [1m[36mGroup Create (1.3ms)[0m  [1m[32mINSERT INTO "groups" ("name", "user_id") VALUES (?, ?)[0m  [["name", "1312312312"], ["user_id", 8]]
+  ↳ app/controllers/groups_controller.rb:11
+  [1m[35m (197.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:11
+Completed 500 Internal Server Error in 27092ms (ActiveRecord: 203.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/groups_controller.rb:12:in `create'
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:19:47 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/imoigre/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered tasks/_form.html.erb (5.8ms)
+  Rendered tasks/_popup.html.erb (7.1ms)
+  Rendered groups/_form.html.erb (0.9ms)
+  Rendered groups/_popup.html.erb (1.7ms)
+Completed 200 OK in 381ms (Views: 329.5ms | ActiveRecord: 4.0ms)
+
+
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/groups" for 127.0.0.1 at 2018-12-07 23:20:08 +0200
+Processing by GroupsController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>{"name"=>"111"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:10
+  [1m[36mGroup Create (0.3ms)[0m  [1m[32mINSERT INTO "groups" ("name", "user_id") VALUES (?, ?)[0m  [["name", "111"], ["user_id", 8]]
+  ↳ app/controllers/groups_controller.rb:10
+  [1m[35m (236.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:12
+Redirected to http://localhost:3000/
+Completed 200 OK in 253ms (ActiveRecord: 237.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:20:08 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.1ms)
+  Rendered tasks/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered tasks/_form.html.erb (1.4ms)
+  Rendered tasks/_popup.html.erb (2.7ms)
+  Rendered groups/_form.html.erb (1.0ms)
+  Rendered groups/_popup.html.erb (1.9ms)
+Completed 200 OK in 100ms (Views: 92.4ms | ActiveRecord: 1.9ms)
+
+
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:23:45 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (3.2ms)
+  Rendered tasks/_popup.html.erb (5.1ms)
+  Rendered groups/_form.html.erb (1.0ms)
+  Rendered groups/_popup.html.erb (2.2ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:23:47 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.1ms)
+  Rendered tasks/index.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (1.9ms)
+  Rendered tasks/_popup.html.erb (2.6ms)
+  Rendered groups/_form.html.erb (0.8ms)
+  Rendered groups/_popup.html.erb (1.6ms)
+Completed 200 OK in 62ms (Views: 56.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:24:14 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.1ms)
+  Rendered tasks/index.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (4.7ms)
+  Rendered tasks/_popup.html.erb (6.0ms)
+  Rendered groups/_form.html.erb (1.1ms)
+  Rendered groups/_popup.html.erb (2.4ms)
+Completed 200 OK in 112ms (Views: 101.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:24:54 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>"test", "task"=>{"title"=>"ddaksfasd", "description"=>"kkkkkkk", "expire_at"=>"2018-12-30"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (3.3ms)
+  Rendered tasks/create.js.erb (10.0ms)
+Completed 200 OK in 41ms (Views: 16.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:24:56 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>"test", "task"=>{"title"=>"ddaksfasd", "description"=>"kkkkkkk", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (3.7ms)
+  Rendered tasks/create.js.erb (9.3ms)
+Completed 200 OK in 41ms (Views: 15.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:25:01 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>"test", "task"=>{"title"=>"ddaksfasd", "description"=>"kkkkkkk", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.2ms)
+  Rendered tasks/create.js.erb (8.6ms)
+Completed 200 OK in 43ms (Views: 17.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:25:07 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>"test", "task"=>{"title"=>"ddaksfasd", "description"=>"kkkkkkk", "expire_at"=>"2018-12-07"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.9ms)
+  Rendered tasks/create.js.erb (9.7ms)
+Completed 200 OK in 30ms (Views: 16.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:25:13 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>"test", "task"=>{"title"=>"ddaksfasd", "description"=>"kkkkkkk", "expire_at"=>"2018-12-13"}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (3.0ms)
+  Rendered tasks/create.js.erb (10.5ms)
+Completed 200 OK in 30ms (Views: 15.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:25:38 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>"test", "task"=>{"title"=>"ddaksfasd", "description"=>"kkkkkkk", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (3.7ms)
+  Rendered tasks/create.js.erb (9.3ms)
+Completed 200 OK in 28ms (Views: 13.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:26:29 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.4ms)
+  Rendered tasks/_popup.html.erb (3.2ms)
+  Rendered groups/_form.html.erb (0.8ms)
+  Rendered groups/_popup.html.erb (1.6ms)
+Completed 200 OK in 73ms (Views: 45.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:26:41 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>"test", "task"=>{"title"=>"dasfadf", "description"=>"xcvzcxvczxzcx", "expire_at"=>"2018-12-28"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.3ms)
+  Rendered tasks/create.js.erb (6.9ms)
+Completed 200 OK in 29ms (Views: 12.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:27:10 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>"test", "task"=>{"title"=>"dasfadfggg", "description"=>"xcvzcxvczxzcx", "expire_at"=>"2018-12-21"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (5.1ms)
+  Rendered tasks/create.js.erb (17.6ms)
+Completed 200 OK in 73ms (Views: 34.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:27:29 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "group"=>"test", "task"=>{"title"=>"dasfadfggg", "description"=>"xcvzcxvczxzcx", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (5.9ms)
+  Rendered tasks/create.js.erb (25.6ms)
+Completed 200 OK in 88ms (Views: 45.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:30:10 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.1ms)
+  Rendered tasks/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (177.1ms)
+  Rendered tasks/_popup.html.erb (178.2ms)
+Completed 500 Internal Server Error in 270ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `select_tag' for #<ActionView::Helpers::FormBuilder:0x00007fa5e606c1b8>
+Did you mean?  select):
+    1: <%= form_for @task, remote: true, class: 'col-lg-6 col-8 mx-auto' do |f| %>
+    2:   <div class="input-group">
+    3:     <%= f.select_tag :group, options_for_select(Group.all.map { |g| g.name }) %>
+    4:     
+    5:   </div>
+    6: 
+  
+app/views/tasks/_form.html.erb:3:in `block in _app_views_tasks__form_html_erb__2024036570960578591_70175252774400'
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__2024036570960578591_70175252774400'
+app/views/tasks/_popup.html.erb:7:in `_app_views_tasks__popup_html_erb__1781863353880517166_70175253533640'
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb__172847043705384230_70175269860920'
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:30:20 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.2ms)
+  Rendered tasks/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (5.3ms)
+  Rendered tasks/_popup.html.erb (7.7ms)
+  Rendered groups/_form.html.erb (0.8ms)
+  Rendered groups/_popup.html.erb (1.7ms)
+Completed 200 OK in 119ms (Views: 110.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:30:28 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group"=>"test", "title"=>"qweqweqwe", "description"=>"qweqweqwewq", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Group(#70175170809600) expected, got "test" which is an instance of String(#47145393167900)):
+  
+app/controllers/tasks_controller.rb:11:in `create'
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:30:50 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.2ms)
+  Rendered tasks/index.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.2ms)
+  Rendered tasks/_popup.html.erb (3.4ms)
+  Rendered groups/_form.html.erb (0.8ms)
+  Rendered groups/_popup.html.erb (1.6ms)
+Completed 200 OK in 106ms (Views: 96.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:30:55 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group_id"=>"test", "title"=>"231312312", "description"=>"123123123", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Unpermitted parameter: :group_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (5.6ms)
+  Rendered tasks/create.js.erb (13.0ms)
+Completed 200 OK in 55ms (Views: 25.6ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:34:17 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (3.0ms)
+  Rendered tasks/_popup.html.erb (4.7ms)
+  Rendered groups/_form.html.erb (1.6ms)
+  Rendered groups/_popup.html.erb (2.7ms)
+Completed 200 OK in 67ms (Views: 62.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:34:24 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group"=>"111", "title"=>"1231231231312", "description"=>"12312312312312", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Group(#70175170809600) expected, got "111" which is an instance of String(#47145393167900)):
+  
+app/controllers/tasks_controller.rb:11:in `create'
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:36:44 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (3.0ms)
+  Rendered tasks/_popup.html.erb (4.1ms)
+  Rendered groups/_form.html.erb (0.8ms)
+  Rendered groups/_popup.html.erb (1.7ms)
+Completed 200 OK in 66ms (Views: 60.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:36:51 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group"=>"1", "title"=>"1123123123", "description"=>"1312312321", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Group(#70175170809600) expected, got "1" which is an instance of String(#47145393167900)):
+  
+app/controllers/tasks_controller.rb:11:in `create'
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:37:10 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.1ms)
+  Rendered tasks/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.0ms)
+  Rendered tasks/_popup.html.erb (2.7ms)
+  Rendered groups/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.4ms)
+Completed 200 OK in 90ms (Views: 83.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:37:15 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group_id"=>"1", "title"=>"qwewwq", "description"=>"qweqweqw", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+Unpermitted parameter: :group_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.0ms)
+  Rendered tasks/create.js.erb (6.9ms)
+Completed 200 OK in 49ms (Views: 13.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:37:34 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [0 times] (0.0ms)
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.3ms)
+  Rendered tasks/_popup.html.erb (3.1ms)
+  Rendered groups/_form.html.erb (0.9ms)
+  Rendered groups/_popup.html.erb (1.7ms)
+Completed 200 OK in 75ms (Views: 44.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:37:43 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group_id"=>"1", "title"=>"qweqweqweq", "description"=>"qweqweqweq", "expire_at"=>"2018-12-14"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mTask Create (3.8ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "expire_at", "created_at", "updated_at", "user_id", "group_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "qweqweqweq"], ["description", "qweqweqweq"], ["expire_at", "2018-12-14 00:00:00"], ["created_at", "2018-12-07 21:37:43.354711"], ["updated_at", "2018-12-07 21:37:43.354711"], ["user_id", 8], ["group_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (222.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 200 OK in 256ms (ActiveRecord: 227.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:37:43 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [1 times] (32.1ms)
+  Rendered tasks/index.html.erb within layouts/application (44.0ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.6ms)
+  Rendered tasks/_popup.html.erb (3.9ms)
+  Rendered groups/_form.html.erb (1.4ms)
+  Rendered groups/_popup.html.erb (3.1ms)
+Completed 200 OK in 110ms (Views: 101.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:38:45 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group_id"=>"4", "title"=>"adasdasd", "description"=>"asdasdasdasd", "expire_at"=>""}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  Rendering tasks/create.js.erb
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (3.5ms)
+  Rendered tasks/create.js.erb (9.7ms)
+Completed 200 OK in 43ms (Views: 17.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:38:48 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group_id"=>"1", "title"=>"adasdasd", "description"=>"asdasdasdasd", "expire_at"=>"2018-12-08"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mTask Create (13.6ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "expire_at", "created_at", "updated_at", "user_id", "group_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "adasdasd"], ["description", "asdasdasdasd"], ["expire_at", "2018-12-08 00:00:00"], ["created_at", "2018-12-07 21:38:48.279429"], ["updated_at", "2018-12-07 21:38:48.279429"], ["user_id", 8], ["group_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (186.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 200 OK in 218ms (ActiveRecord: 200.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:38:48 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  Rendered collection of tasks/_task.html.erb [2 times] (7.4ms)
+  Rendered tasks/index.html.erb within layouts/application (21.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.2ms)
+  Rendered tasks/_popup.html.erb (3.1ms)
+  Rendered groups/_form.html.erb (0.9ms)
+  Rendered groups/_popup.html.erb (2.0ms)
+Completed 200 OK in 86ms (Views: 77.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:40:59 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:3
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:3
+  Rendered collection of tasks/_task.html.erb [2 times] (4.8ms)
+  Rendered tasks/index.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.8ms)
+  Rendered tasks/_popup.html.erb (4.3ms)
+  Rendered groups/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.5ms)
+Completed 200 OK in 77ms (Views: 74.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:41:25 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:3
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:3
+  Rendered collection of tasks/_task.html.erb [2 times] (4.1ms)
+  Rendered tasks/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.8ms)
+  Rendered tasks/_popup.html.erb (4.0ms)
+  Rendered groups/_form.html.erb (1.1ms)
+  Rendered groups/_popup.html.erb (2.9ms)
+Completed 200 OK in 59ms (Views: 54.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:41:41 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  Rendered collection of tasks/_task.html.erb [2 times] (15.3ms)
+  Rendered tasks/index.html.erb within layouts/application (25.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.7ms)
+  Rendered tasks/_popup.html.erb (3.5ms)
+  Rendered groups/_form.html.erb (1.0ms)
+  Rendered groups/_popup.html.erb (2.0ms)
+Completed 200 OK in 123ms (Views: 114.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:42:38 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mCACHE Group Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  Rendered collection of tasks/_task.html.erb [2 times] (13.9ms)
+  Rendered tasks/index.html.erb within layouts/application (23.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (3.1ms)
+  Rendered tasks/_popup.html.erb (4.3ms)
+  Rendered groups/_form.html.erb (1.2ms)
+  Rendered groups/_popup.html.erb (2.2ms)
+Completed 200 OK in 113ms (Views: 101.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:42:59 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  Rendered collection of tasks/_task.html.erb [2 times] (11.5ms)
+  Rendered tasks/index.html.erb within layouts/application (22.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.9ms)
+  Rendered tasks/_popup.html.erb (4.1ms)
+  Rendered groups/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.5ms)
+Completed 200 OK in 123ms (Views: 115.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-12-07 23:43:23 +0200
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"group_id"=>"4", "title"=>"214234234234", "description"=>"243242423432", "expire_at"=>"2018-12-21"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[36mTask Create (11.7ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "expire_at", "created_at", "updated_at", "user_id", "group_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "214234234234"], ["description", "243242423432"], ["expire_at", "2018-12-21 00:00:00"], ["created_at", "2018-12-07 21:43:23.705401"], ["updated_at", "2018-12-07 21:43:23.705401"], ["user_id", 8], ["group_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (241.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+  [1m[35m (23.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 200 OK in 293ms (ActiveRecord: 276.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:43:24 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  Rendered collection of tasks/_task.html.erb [3 times] (10.9ms)
+  Rendered tasks/index.html.erb within layouts/application (18.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (1.9ms)
+  Rendered tasks/_popup.html.erb (2.7ms)
+  Rendered groups/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.4ms)
+Completed 200 OK in 72ms (Views: 62.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:43:25 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mCACHE Group Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  Rendered collection of tasks/_task.html.erb [3 times] (23.1ms)
+  Rendered tasks/index.html.erb within layouts/application (36.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.0ms)
+  Rendered tasks/_popup.html.erb (2.7ms)
+  Rendered groups/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.5ms)
+Completed 200 OK in 134ms (Views: 122.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:43:27 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mCACHE Group Load (0.0ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  Rendered collection of tasks/_task.html.erb [3 times] (13.6ms)
+  Rendered tasks/index.html.erb within layouts/application (24.9ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.1ms)
+  Rendered tasks/_popup.html.erb (3.3ms)
+  Rendered groups/_form.html.erb (0.8ms)
+  Rendered groups/_popup.html.erb (1.7ms)
+Completed 200 OK in 82ms (Views: 70.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-07 23:43:28 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 8], ["LIMIT", 5], ["OFFSET", 0]]
+  ↳ app/views/tasks/index.html.erb:23
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mCACHE Group Load (0.1ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/tasks/_task.html.erb:2
+  Rendered collection of tasks/_task.html.erb [3 times] (23.5ms)
+  Rendered tasks/index.html.erb within layouts/application (35.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/tasks/_form.html.erb:3
+  Rendered tasks/_form.html.erb (2.0ms)
+  Rendered tasks/_popup.html.erb (2.8ms)
+  Rendered groups/_form.html.erb (0.7ms)
+  Rendered groups/_popup.html.erb (1.5ms)
+Completed 200 OK in 119ms (Views: 108.2ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/tasks/4" for 127.0.0.1 at 2018-12-07 23:44:09 +0200
+Processing by TasksController#update as JS
+  Parameters: {"task"=>{"status"=>"done"}, "id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 8], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:30
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:18
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18
+  [1m[36mTask Update (1.7ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", 1], ["updated_at", "2018-12-07 21:44:09.435117"], ["id", 4]]
+  ↳ app/controllers/tasks_controller.rb:18
+  [1m[35m (601.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:18
+Completed 200 OK in 627ms (ActiveRecord: 604.8ms)
+
+
+Started PATCH "/tasks/4" for 127.0.0.1 at 2018-12-07 23:44:10 +0200
+Processing by TasksController#update as JS
+  Parameters: {"task"=>{"status"=>"todo"}, "id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ? AND "tasks"."id" = ? LIMIT ?[0m  [["user_id", 8], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:18
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18
+  [1m[36mTask Update (1.5ms)[0m  [1m[33mUPDATE "tasks" SET "status" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["status", 0], ["updated_at", "2018-12-07 21:44:10.806476"], ["id", 4]]
+  ↳ app/controllers/tasks_controller.rb:18
+  [1m[35m (488.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:18
+Completed 200 OK in 508ms (ActiveRecord: 491.5ms)
+
+

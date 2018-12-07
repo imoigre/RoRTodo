@@ -3,6 +3,7 @@ class TasksController < ApplicationController
 
   def index
     @task = Task.new
+    @group = Group.new
     @tasks = Task.for_dashboard(params).where(user_id: params[:user_id] || current_user)
   end
 
@@ -34,6 +35,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:title, :description, :expire_at, :status)
+    params.require(:task).permit(:group_id, :title, :description, :expire_at, :status)
   end
 end

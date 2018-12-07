@@ -1,0 +1,7 @@
+<%= form_for @group, remote: true, class: 'col-lg-6 col-8 mx-auto' do |f| %>
+  <div class="input-group">
+    <%= f.text_field :name, value: @group.name, class: 'form-control', placeholder: 'Name' %>
+    <p class="error"><%= @group.errors[:group].first %></p>
+  </div>
+  <%= f.button :OK, class: 'save btn btn-primary' %>
+<% end %>
